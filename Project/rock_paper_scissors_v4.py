@@ -1,4 +1,4 @@
-         from random import randint
+from random import randint
 
 user_score = 0
 comp_score = 0

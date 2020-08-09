@@ -1,4 +1,4 @@
-value = int(input("Enter a number to check prime or not :: "))
+value = int(input("Enter a number to check neon or not :: "))
 
 neon = value*value
 s = 0;  
