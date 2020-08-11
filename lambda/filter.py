@@ -23,7 +23,7 @@ your_instructer = list(map(lambda name: "your instructer is " +
 print(your_instructer)
 
 # same thing using list comprehension
-print(["your instructer is " + name for name in names if len(name) < 5])	
+print([f"your instructer is {name}" for name in names if len(name) < 5])	
 									#['your instructer is Raj', 'your instructer is Joy', 'your instructer is Aman']
 
 # <---------------------------------------------------->

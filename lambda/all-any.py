@@ -27,12 +27,18 @@ print(any([num % 2 == 0 for num in nums]))
 names = ["Raj", "Raima", "Rahul", "Rohit", "Ricky", "Ramesh"]
 
 # True because all names start with "R"
-print(all(name[0] == "R" for name in names))
+print(all([name[0] == "R" for name in names]))
 
 names = ["Raj", "Raima", "Rahul", "Babai", "Ricky", "Monai"]
 
 # False because all names not start with "R"
-print(all(name[0] == "R" for name in names))
+print(all([name[0] == "R" for name in names]))
 
 # True because any one the name not start with "R"
+print(any([name[0] == "R" for name in names]))
+
+# Generator Expressions and Using sys.getsizeof method
+
+# insted of list comprehension sybmol "[]", we can avoid it, if we dont't want to save te output,
+# because gen expr take too much less memory ! For more details check memory_demo.py file 
 print(any(name[0] == "R" for name in names))
