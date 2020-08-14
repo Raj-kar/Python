@@ -1,0 +1,17 @@
+# Write a Python program to filter a list of integers using Lambda.
+
+
+# print even
+filter_list = lambda *num: print(list(filter(lambda n: n % 2 == 0, num)))
+
+filter_list(*[1, 2, 3, 4, 5, 6])  # [2, 4, 6]
+
+# print odd
+filter_list = lambda *num: print(list(filter(lambda n: n % 2 != 0, num)))
+
+l = [1, 2, 3, 4, 5, 6]
+
+filter_list(*l)						# [1, 3, 5]
+
+filter_list(*range(50))
+# [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49]
