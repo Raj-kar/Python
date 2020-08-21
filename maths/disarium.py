@@ -15,4 +15,5 @@ if value:
 else:
 	print("Enter a proper value ..!")
 
-# 175,135,89 etc ..! [sum of cubes are same]
+# 175,135,89 etc ..! [sum of count are same]
+# like here 175 = 1^1+7^2+5^3 = 175 
