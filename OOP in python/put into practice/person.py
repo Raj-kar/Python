@@ -1,4 +1,4 @@
-class Person(object):
+class Person:
 	
 	active_user = 0
 
