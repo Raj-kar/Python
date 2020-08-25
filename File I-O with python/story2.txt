@@ -1,0 +1,5 @@
+this is a new line 
+we can wrote multiple line Here ! 
+file will be closed automatically also !
+great right ! 
+power of Python 

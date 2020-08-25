@@ -1,0 +1,8 @@
+this file is now open 
+whatever we write now, it'll replaced the
+original file 
+
+this file is now open 
+whatever we write now, it'll append on the
+original file 
+no previous data will be lost ! :)
