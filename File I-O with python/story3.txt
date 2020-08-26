@@ -1,8 +1,10 @@
 replace the previous 
- of the file.
-This is the second line of the file !NEW STUFFNEW STUFF
+ of the file.  
+This is the second line of the file !W STUFFNEW STUFF
  NEW STUFF
 This is the first line, of append file.  
 This is the second line of the append file 
 !replace the previous 
 NEW STUFF 
+
+ NEW STUFF 

@@ -13,34 +13,34 @@ while count < user_round:
 
     user1 = input("\nEnter your Choice :: ").lower()
 
-    if(user1 == "q"):
+    if user1 == "q":
         break
 
     rand_num = randint(0, 2)
 
-    if(rand_num == 0):
+    if rand_num == 0:
         comp = "rock"
-    elif(rand_num == 1):
+    elif rand_num == 1:
         comp = "paper"
-    elif(rand_num == 2):
+    elif rand_num == 2:
         comp = "scissors"
 
     print(f"Computer choose :: {comp}")
 
-    if (user1 == "paper" or user1 == "rock" or user1 == "scissors"):
-        if(user1 == "rock" and comp == "scissors"):
+    if user1 == "paper" or user1 == "rock" or user1 == "scissors":
+        if user1 == "rock" and comp == "scissors":
             print("\nplayer 1 WIN")
             user_score += 1
             print(f"\nplayer 1 score = {user_score} and computer score = {comp_score}")
-        elif(user1 == "paper" and comp == "rock"):
+        elif user1 == "paper" and comp == "rock":
             print("\nplayer 1 WIN")
             user_score += 1
             print(f"\nplayer 1 score = {user_score} and computer score = {comp_score}")
-        elif(user1 == "scissors" and comp == "paper"):
+        elif user1 == "scissors" and comp == "paper":
             print("\nplayer 1 WIN")
             user_score += 1
             print(f"\nplayer 1 score = {user_score} and computer score = {comp_score}")
-        elif(user1 == comp):
+        elif user1 == comp:
             print("\nIt's a Tie")
             print(f"\nplayer 1 score = {user_score} and computer score = {comp_score}")
         else:
@@ -59,5 +59,4 @@ if user_score > comp_score:
 elif user_score == comp_score:
     print("\nIt's a tie match !!.. Try agin Next Time ;)")
 else:
-    print("\nOppss ..! Computer win  :( ")
-
+    print("\nOps ..! Computer win  :( ")
