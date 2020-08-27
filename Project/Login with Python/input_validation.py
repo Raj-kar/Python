@@ -1,36 +1,29 @@
 from password_checker import check_strength
 
 
-def take_user_fName():
+def take_user_name(state):
     while True:
-        user_fName = input("Enter your first name :: ")
+        user_name = input(f"Enter your {state} name :: ")
         try:
-            type(int(user_fName)) == int
+            type(int(user_name)) == int
         except Exception as e:
             # print(e)
-            if len(user_fName) < 3:
-                print("minimum 3 alphabetic first name required !")
+            if len(user_name) < 3:
+                print(f"minimum 3 alphabetic {state} name required !")
             else:
-                user_fName = "".join(user_fName.split(" "))
-                return user_fName
+                user_name = "".join(user_name.split(" "))
+                return user_name
         else:
             print("only numeric digit not allowed on name !")
+
+
+
+def take_user_fName():
+    return take_user_name("first")
 
 
 def take_user_lName():
-    while True:
-        user_lName = input("Enter your last name :: ")
-        try:
-            type(int(user_lName)) == int
-        except Exception as e:
-            # print(e)
-            if len(user_lName) < 3:
-                print("minimum 3 alphabetic last name required !")
-            else:
-                user_lName = "".join(user_lName.split(" "))
-                return user_lName
-        else:
-            print("only numeric digit not allowed on name !")
+    return take_user_name("last")
 
 
 def take_user_email():
@@ -67,6 +60,8 @@ def take_user_password():
         else:
             print("only numeric digit not allowed on password !")
 
+
+# for check validation !
 
 # fName = take_user_fName()
 # lName = take_user_lName()

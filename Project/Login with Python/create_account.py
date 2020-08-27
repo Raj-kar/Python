@@ -31,7 +31,7 @@ def search_user():
 
         create_user(2)
 
-
+# display menu 
 user_fName = take_user_fName()
 user_lName = take_user_lName()
 user_email = take_user_email()
@@ -39,7 +39,7 @@ user_password = take_user_password()
 
 current_user = [user_fName, user_lName, user_email, user_password]
 
-
+# check already have data or not 
 def flag():
     return 1 if csv_reader else 0
 

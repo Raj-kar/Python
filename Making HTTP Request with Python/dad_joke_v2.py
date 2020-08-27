@@ -2,7 +2,6 @@ import requests
 from termcolor import cprint, colored
 from random import choice
 import pyfiglet
-from random import choice
 
 headers = {"Accept": "application/json"}
 ava_colors = ("red", "blue", "green", "yellow", "blue", "magenta", "cyan")

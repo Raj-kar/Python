@@ -16,6 +16,10 @@ def check_strength(password):
             special_char += 1
 
     total = upper_case + lower_case + numeric + special_char
+    if special_char < 1:
+        print("special char required !")
+    if numeric < 2:
+        print("numeric value required !")
     if total > 7 and upper_case >= 1 and lower_case >= 4 and numeric >= 2 and special_char >= 1:
         return True
     else:
