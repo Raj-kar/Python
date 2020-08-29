@@ -17,7 +17,6 @@ def take_user_name(state):
             print("only numeric digit not allowed on name !")
 
 
-
 def take_user_fName():
     return take_user_name("first")
 
@@ -59,7 +58,6 @@ def take_user_password():
                 print("enter a strong password ! ")
         else:
             print("only numeric digit not allowed on password !")
-
 
 # for check validation !
 
