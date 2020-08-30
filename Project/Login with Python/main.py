@@ -1,6 +1,6 @@
 from csv import reader, writer
 
-from input_validation import take_user_fName, take_user_lName, take_user_email, take_user_password
+from input_validation import take_user_fName, take_user_lName, take_user_email, take_user_password, reEnter_user_password
 from login_account import user_login
 
 
