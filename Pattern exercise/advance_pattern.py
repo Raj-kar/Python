@@ -1,4 +1,4 @@
-# # pattern --> 1
+# pattern --> 1
 
 for i in range(1,10,2):
 	for j in range(i,10,2):
@@ -7,40 +7,40 @@ for i in range(1,10,2):
 		print(k,end=" ")
 	print()
 
-# # output -->
-# # 1 3 5 7 9
-# # 3 5 7 9 1
-# # 5 7 9 1 3
-# # 7 9 1 3 5
-# # 9 1 3 5 7
+# output -->
+# 1 3 5 7 9
+# 3 5 7 9 1
+# 5 7 9 1 3
+# 7 9 1 3 5
+# 9 1 3 5 7
 
-# # pattern --> 2
+# pattern --> 2
 
 for i in range(5,0,-2):
 	for j in range(i,0,-1):
 		print(i,end=" ")
 	print()
 
-# # output -->
-# # 5 5 5 5 5
-# # 3 3 3
-# # 1
+# output -->
+# 5 5 5 5 5
+# 3 3 3
+# 1
 
-# # pattern --> 3
+# pattern --> 3
 
 for i in range(1,10,2):
 	for j in range(i,0,-2):
 		print(i,end=" ")
 	print()
 
-# # output -->
-# # 1
-# # 3 3
-# # 5 5 5
-# # 7 7 7 7
-# # 9 9 9 9 9
+# output -->
+# 1
+# 3 3
+# 5 5 5
+# 7 7 7 7
+# 9 9 9 9 9
 
-# # pattern --> 4
+# pattern --> 4
 
 k = 15
 for i in range(5,0,-1):
