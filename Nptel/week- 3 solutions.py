@@ -13,11 +13,16 @@ for i in range(1, 51):
     list_1.append(i)
 
 a, b = input().split()
-a = int(a)
-b = int(b)
 
-new_list = list_1[a:b]
+new_list = list_1[int(a):int(b)]
 for i in new_list:
+    print(i)
+
+# <--------------- Using List Comprehension ------------->
+
+a, b = input().split()
+list_1 = [i for i in range(1,51)]
+for i in list_1[int(a):int(b)]:
     print(i)
 
 # <------ solution programming assignment 3 -------> #
@@ -35,4 +40,11 @@ for i in list_1:
 
 print(count, end="")
 
+# <--------------- Using List Comprehension ------------->
+list_1 = [i for i in range(1, 51)]
+num = int(input())
+res = [1 for x in list_1[num:] if x % num == 0]
+print(sum(res),end="")
+
 # <-------- Practiced purposed only < Raj™ /> --------------> #
+
