@@ -9,14 +9,12 @@ print((s1 + s2 + s3 + s4 + s5) / 5, end="")
 
 # <------ solution programming assignment 2 -------> #
 list_1 = []
-for i in range(1, 51):
-    list_1.append(i)
+for i in range(1,51):
+	list_1.append(i)
 
 a, b = input().split()
-a = int(a)
-b = int(b)
 
-new_list = list_1[a:b]
+new_list = list_1[int(a):int(b)]
 for i in new_list:
     print(i)
 
