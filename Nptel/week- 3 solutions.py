@@ -18,9 +18,9 @@ for i in new_list:
     print(i)
     
 # <------or, List comprehension solution -------> #
-a, b = input().split()
+a, b = map(int, input().split())
 list_1 = [i for i in range(1,51)]
-for i in list_1[int(a):int(b)]:
+for i in list_1[a:b]:
     print(i)
     
 # <------ solution programming assignment 3 -------> #
