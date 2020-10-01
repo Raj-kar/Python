@@ -1,39 +1,37 @@
 import requests
 from bs4 import BeautifulSoup
-from csv import writer
+import pandas as pd
 
-url = "https://www.flipkart.com/mobiles/pr?sid=tyy%2C4io&p%5B%5D=facets.brand%255B%255D%3DRealme&otracker=nmenu_sub_Electronics_0_Realme"
-current = 0
-next_page = 2
+def realme(next_page):
+    url = f'https://www.flipkart.com/mobiles/pr?sid=tyy%2C4io&p%5B%5D=facets.brand%255B%255D%3DRealme&otracker=nmenu_sub_Electronics_0_Realme&page={next_page}'
 
-while True:
-    response = requests.get(url).text
-    soup = BeautifulSoup(response, "html.parser")
+    r = requests.get(url)
+    soup = BeautifulSoup(r.content, 'html.parser')
 
-    divs = soup.select("._1-2Iqu")
-    if not divs:
-        break
+    return soup
 
-    with open("realme_phones.csv", "a", newline="") as file:
-        csv_writer = writer(file)
-        if not current:
-            csv_writer.writerow(["Mobile Name", "Price"])
+def extract(soup):
+    divs = soup.find_all('div', class_ = '_1-2Iqu')
+    
+    for items in divs:
+        title = items.find('div', class_ = '_3wU53n').text
+        price = items.find('div', class_ = '_1vC4OE').text.replace('₹','')
+        
+        mobile = {
+            'Mobile Name': title,
+            'Price': price,
+        }
 
-        for div in divs:
-            mobile_name = div.select("._3wU53n")[0].get_text()
-            mobile_price = div.select("._1vC4OE")[0].get_text()[1:]
-            # print(f"{mobile_name} --> {mobile_price}")
-            csv_writer.writerow([mobile_name, mobile_price])
+        realme_list.append(mobile)
 
-        a_tags = soup.select("._2Xp0TH")
+    return
 
-        for tag in a_tags:
-            if not current:
-                pass
-            else:
-                url = f"https://www.flipkart.com/mobiles/pr?sid=tyy%2C4io&p%5B%5D=facets.brand%255B%255D%3DRealme&otracker=nmenu_sub_Electronics_0_Realme&page={next_page}"
-                # print(url)
-                print(f"😈 Scarping Done {next_page}😈")
-                next_page += 1
-                break
-            current += 1
+realme_list = []
+
+for i in range(1,6):
+    print(f'Getting Page {i}!!')
+    c = realme(i)
+    extract(c)
+
+df = pd.DataFrame(realme_list)
+df.to_csv('realme_phones.csv')
