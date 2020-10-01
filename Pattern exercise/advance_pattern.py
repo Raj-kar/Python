@@ -123,4 +123,32 @@ for i in range(1, 6):
 # 1 3 
 # 1 
 
+# pattern --> 9
+
+row = 10
+column = 10
+
+for i in range(row):
+    for j in range(column):
+        if i <= 1 or i >= (row - 2) or j <= 1 or j >= (column - 2):
+            print("@",end=" ")
+        elif(i == j):
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+# output -->
+# @ @ @ @ @ @ @ @ @ @ 
+# @ @ @ @ @ @ @ @ @ @ 
+# @ @ *           @ @ 
+# @ @   *         @ @ 
+# @ @     *       @ @ 
+# @ @       *     @ @ 
+# @ @         *   @ @ 
+# @ @           * @ @ 
+# @ @ @ @ @ @ @ @ @ @ 
+# @ @ @ @ @ @ @ @ @ @ 
+
+
 # ---------------  © All copyrights reserved by Raj -------------------- #

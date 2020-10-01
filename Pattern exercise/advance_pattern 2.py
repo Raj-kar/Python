@@ -72,4 +72,22 @@ for i in range(10, 1, -2):
 # 1 3 1 3 5
 # 1 1 3 5 7
 
+# pattern --> 5
+
+space = 4
+for i in range(9, 0, -2):
+    for k in range(space):
+        print(" ",end="")
+    for j in range(i, 10, 2):
+        print(j, end="")
+    print()
+    space -= 1
+
+# output -->
+#     9
+#    79
+#   579
+#  3579
+# 13579
+
 # ---------------  © All copyrights reserved by Raj -------------------- #
