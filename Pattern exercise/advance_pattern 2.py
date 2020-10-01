@@ -56,12 +56,15 @@ for i in range(1,6):
 
 # pattern --> 4
 
-for i in range(10, 1, -2):
-    for j in range(1, i, 2):
-        print(j, end=" ")
-    for k in range(1, 11 - i, 2):
-        print(k, end=" ")
-    print()
+for i in range(1,10,2):
+	c = 1
+	for j in range(1,10,2):
+		if i+j <= 10:
+			print(j,end='')
+		else:
+			print(c,end='')
+			c+=2
+	print()
 
 # output -->
 # 1 3 5 7 9
