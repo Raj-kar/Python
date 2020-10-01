@@ -35,4 +35,4 @@ for i in list_1:
 
 print(count, end="")
 
-# <-------- Practiced purposed only < Raj™ /> --------------> #
+# <-------- For Practice purpose only < Raj™ /> --------------> #
