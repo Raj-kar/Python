@@ -7,12 +7,12 @@ rupee = int(input())
 print(rupee*80,end="")
 
 # <------ solution programming assignment 3 -------> #
-cost = int(input())
-sell = int(input())
+cost price = int(input())
+sell price = int(input())
 
-if cost > sell:
+if cost price> sell price:
   print("Loss",end="")
-elif cost < sell:
+elif cost price < sell price:
   print("Profit",end="")
 else:
   print("Neither",end="")
