@@ -1,11 +1,9 @@
 # pattern --> 1
 
-for i in range(1, 10, 2):
-    for j in range(i, 10, 2):
-        print(j, end=" ")
-    for k in range(1, i, 2):
-        print(k, end=" ")
-    print()
+for i in range(1,10,2):
+	for j in range(i,i+9,2):
+		print(j%10,end='')
+	print()
 
 # output -->
 # 1 3 5 7 9
