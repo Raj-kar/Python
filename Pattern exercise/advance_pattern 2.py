@@ -75,14 +75,13 @@ for i in range(1,10,2):
 
 # pattern --> 5
 
-space = 4
-for i in range(9, 0, -2):
-    for k in range(space):
-        print(" ",end="")
-    for j in range(i, 10, 2):
-        print(j, end="")
+for i in range(1,10,2):
+    for j in range(1,10,2):
+        if i + j >= 10:
+            print(j,end='')
+        else:
+            print(' ', end='')
     print()
-    space -= 1
 
 # output -->
 #     9
