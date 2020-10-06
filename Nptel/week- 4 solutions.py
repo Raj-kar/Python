@@ -84,3 +84,8 @@ while list_1 != sorted(list_1):
     list_1[i], list_1[j] = list_1[j], list_1[i]
 
 print(*list_1, end=" ")
+
+
+ >> you can add your own solution code below it,
+ >> just create a pull request 👋..! 
+ >> ;)
