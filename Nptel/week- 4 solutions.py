@@ -18,7 +18,7 @@ for i in arr:
 
 
 '''
-Question 2 --> Factorail
+Question 2 --> Factorial
 '''
 ''' solution - 1,  Using Recursion '''
 k = int(input())
