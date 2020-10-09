@@ -106,6 +106,7 @@ second	6	NaN
 
 
 # <----- Question 9 --->
+
 def randomIndex(data):  # create random set of arr
     from random import randint
     arr = []
