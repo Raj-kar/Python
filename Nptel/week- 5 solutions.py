@@ -40,6 +40,11 @@ for _ in range(num):
 print(int(round((pos["x"]**2 + pos["y"]**2)**0.5)),
       end="")   # DISTANCE FROM ORIGIN
 
+''' you can also use this formula for calculate DISTANCE !
+import math
+print(round(math.sqrt(pos["x"]**2 + pos["y"]**2)), end="")
+'''
+
 
 '''
 Question 3 --> Dict Sqaure [same as previous]
