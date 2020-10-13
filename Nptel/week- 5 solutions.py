@@ -26,7 +26,8 @@ pos = {"x": 0, "y": 0}
 num = int(input())
 
 for _ in range(num):
-    command = input().split(" ")      # ACCEPT MOVEMENT COMMAND AND STORE AS A LIST
+    # ACCEPT MOVEMENT COMMAND AND STORE AS A LIST
+    command = input().upper().split(" ")
     if command[0] == "UP":             # EXTRACT DIRECTION AND COMPARE
         # INCREMENT/DECREMENT APPROPRIATE CO-ORDINATES
         pos["y"] += int(command[1])
