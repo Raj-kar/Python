@@ -19,23 +19,27 @@ class Dobble_Game:
         self.list2.clear()
         self.words.extend(self.removed_words)
         self.removed_words.clear()
-        new_count = int(input("How many items you want to add ?"))
+        new_count = int(input("How many items you want to add ? "))
         self.item_count = new_count
 
     def restart_game(self):
-        choice = input("Play agin ?? [yes/no] ")
+        choice = input("\n Play agin ?? [yes/no] ")
         if choice[0] == "y":
             self.reset()
             self.start()
         else:
-            decorate("Thanks for playing !")
+            print("Thanks for playing !")
 
     def check_answer(self, s_word):
         answer = input("Spot the Similar Word --> ")
         if answer == s_word:
-            decorate("CORRECT ..! ")
+            print("CORRECT ..! ")
         else:
-            decorate(f"Opps! the similar word is {s_word}")
+            answer = input(f"The first letter starts with {s_word[0]} --> ")
+            if answer == s_word:
+                print("CORRECT ..! ")
+            else:
+                print(f"Opps! the similar word is {s_word}")
 
         self.restart_game()
 
@@ -60,15 +64,18 @@ class Dobble_Game:
         data.append(self.random_word())
 
     def start(self):
-        while len(self.list1) < self.item_count:
-            self.insert_word(self.list1)
-            self.insert_word(self.list2)
-        similar_word = self.insert_similar()
+        if self.item_count > len(self.words) // 2:
+            print("Maxium 27 words !")
+        else:
+            while len(self.list1) < self.item_count:
+                self.insert_word(self.list1)
+                self.insert_word(self.list2)
+            similar_word = self.insert_similar()
 
-        decorate(self.list1)
-        decorate(self.list2)
+            print(self.list1)
+            print(self.list2)
 
-        self.check_answer(similar_word)
+            self.check_answer(similar_word)
 
 
 d_game = Dobble_Game(5)

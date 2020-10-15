@@ -4,6 +4,12 @@ from random import randint
 doors = [0] * 3
 
 
+def restart():
+    choice = input("Are you want to play again ? [yes/ no] ").lower()
+    if choice[0] == 'y':
+        play()
+
+
 def check_answer(choice, door_number):
     if (choice - 1) == door_number:
         decorate("CORRECT !")
@@ -14,6 +20,7 @@ def check_answer(choice, door_number):
             decorate("CORRECT !")
         else:
             decorate(f"BMW has on door number {door_number + 1}")
+    restart()
 
 
 def push_goats():
