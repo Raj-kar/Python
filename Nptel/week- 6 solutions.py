@@ -72,8 +72,7 @@ def push_values(count, values):
     values = values.split(" ")
     arr.append([])
     for each in values:
-        if each != " ":
-            arr[count].append(int(each))
+        arr[count].append(int(each))
 
 
 def take_input(count):
@@ -95,4 +94,4 @@ for i in range(num):
             answer[i].append(0)
 
 for row in answer:
-    print(* row, end="")
+    print(* row)
