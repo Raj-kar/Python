@@ -61,7 +61,7 @@ else:
 
 '''
 Question 3 -->  lower triangular matrix
-Basic implementation !
+Basic implementation ! Optimized uploaded sooooon :)
 '''
 num = int(input())
 count = 0
