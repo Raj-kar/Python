@@ -98,7 +98,7 @@ for row in matrix:
     print(*row)
 
 '''
-Question 2 ---> Counter Spiral
+Question 3 ---> Counter Spiral
 '''
 
 
