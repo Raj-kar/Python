@@ -23,21 +23,24 @@ def isPowerOfTwo(n):
     if (n == 0):
         return "NO"
     while (n != 1):
-      if (n % 2 != 0):
-      	return "NO"
-      n = n // 2
+        if (n % 2 != 0):
+            return "NO"
+        n = n // 2
 
     return "YES"
 
+
 n = int(input())
 
-print(isPowerOfTwo(n),end="")
+print(isPowerOfTwo(n), end="")
 
 
 '''
 Different approatch <- question no 2
 Contribute by - @mits
 '''
+
+
 def Log2(x):
     if x == 0:
         return false
@@ -63,26 +66,12 @@ else:
 Question 3 -->  lower triangular matrix
 Basic implementation ! Optimized uploaded sooooon :)
 '''
-num = int(input())
-count = 0
+n = int(input())
 arr = []
 
+for row in range(n):
+    arr.append(input().split())
 
-def push_values(count, values):
-    values = values.split(" ")
-    arr.append([])
-    for each in values:
-        arr[count].append(int(each))
-
-
-def take_input(count):
-    values = input()
-    push_values(count, values)
-
-
-while count < num:
-    take_input(count)
-    count += 1
 
 answer = []
 for i in range(num):
