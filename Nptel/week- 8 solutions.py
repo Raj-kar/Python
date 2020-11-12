@@ -57,3 +57,16 @@ def push_at_last(arr):
 arr = list(map(int, input().split(" ")))
 
 push_at_last(arr)
+
+'''
+Another approach !
+'''
+
+arr = list(map(int, input().split(" ")))
+count = arr.count(0)
+
+for i in range(count):
+    arr.remove(0)
+    arr.append(0)
+
+print(*arr)
