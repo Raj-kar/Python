@@ -1,4 +1,4 @@
-value = input("Enter a number to check happy number or not :: ")
+value = "199"
 userInput = value 
 
 square = 1

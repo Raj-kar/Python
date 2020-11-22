@@ -12,7 +12,8 @@ else:
 
 
 '''
-Question 2 ---> lexicographically smallest palindrome
+Question 2 ---> lexicographically smallest palindrome..
+source -> @stackoverflow !
 '''
 
 word = input()
